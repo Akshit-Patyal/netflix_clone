@@ -1,0 +1,25 @@
+.main-container {
+    .container {
+        height: 500px;
+        width: 540px;
+        background-color: #1e1d1d;
+        margin-top: 10%;
+        border-radius: 8px;
+
+        .form-comp {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 50px;
+
+            h1 {
+                color: #fff;
+            }
+
+            .form-control {
+                background-color: #ddd;
+                color: #fff;
+            }
+        }
+    }
+}
