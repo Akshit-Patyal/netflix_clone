@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import "./Login.scss";
 
 const Login = () => {
@@ -7,24 +7,32 @@ const Login = () => {
     const [password, setPassword] = useState('');
 
     return (
-        <div>
+        <div className="main-container">
+            <img src="Netflix.png" alt="netflix" />
             <center>
-                <div className="container">
+                <div className="form-container">
                     <div className="form-comp">
                         <h1>Sign In</h1>
-                        <Form>
+                        <Form className="form-data">
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Control type="email" placeholder="name@example.com" value={userName} onChange={(ev) => { setUserName(ev.target.value) }} />
-                                <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+                                <Form.Control type="email" placeholder="Email" value={userName} onChange={(ev) => { setUserName(ev.target.value) }} />
                             </Form.Group>
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Control type="password" placeholder="password" value={password} onChange={(ev) => { setPassword(ev.target.value) }} />
+                            <Form.Group controlId="exampleForm.ControlTextarea1">
+                                <Form.Control type="password" placeholder="Password" value={password} onChange={(ev) => { setPassword(ev.target.value) }} />
                             </Form.Group>
+                            <Button className="mt-5">
+                                Login
+                            </Button>
                         </Form>
+                        <div className="login-txt mt-3">
+                            <p>First time using Netflix? <span>Create an account</span></p>
+                            <p>OR</p>
+                            <p className="guest-txt">Login as a guest</p>
+                        </div>
                     </div>
                 </div>
-            </center>
-        </div>
+            </center >
+        </div >
     );
 }
 
