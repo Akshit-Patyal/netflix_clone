@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./Login.scss";
+import { Link } from "react-router-dom";
 
 const Login = () => {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
 
     return (
-        <div className="main-container">
+        <div className="login-container">
             <img src="Netflix.png" alt="netflix" />
             <center>
                 <div className="form-container">
@@ -25,7 +26,7 @@ const Login = () => {
                             </Button>
                         </Form>
                         <div className="login-txt mt-3">
-                            <p>First time using Netflix? <span>Create an account</span></p>
+                            <p>First time using Netflix? <Link to="/SignUp">Create an account</Link></p>
                             <p>OR</p>
                             <p className="guest-txt">Login as a guest</p>
                         </div>

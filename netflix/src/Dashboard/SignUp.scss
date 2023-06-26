@@ -1,0 +1,36 @@
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url("../../public/Login.jpg");
+
+    .header-container {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        img {
+            height: 100px;
+            width: 200px;
+            z-index: 1;
+            grid-column: 1/2;
+            justify-self: center;
+        }
+
+        .header-btn {
+            margin-top: 30px;
+        }
+    }
+
+    .form-control {
+        border: 1px solid #fff;
+        height: 60px;
+        width: 400px;
+        background-color: rgb(27, 26, 26);
+        opacity: 0.9;
+    }
+
+    .form-control::placeholder {
+        color: rgb(159, 159, 159);
+        opacity: 1;
+    }
+}
