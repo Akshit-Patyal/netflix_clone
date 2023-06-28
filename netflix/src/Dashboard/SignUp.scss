@@ -1,8 +1,9 @@
 .signup-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url("../../public/Login.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../public/Login.jpg");
 
     .header-container {
         display: grid;
@@ -12,25 +13,101 @@
             height: 100px;
             width: 200px;
             z-index: 1;
-            grid-column: 1/2;
-            justify-self: center;
+            margin-left: 200px;
         }
 
         .header-btn {
             margin-top: 30px;
+
+            .dropdown-btn {
+                width: 120px;
+                border: 1px solid #fff;
+                border-radius: 4px;
+                height: 35px;
+                color: #fff;
+                line-height: 0;
+                font-weight: 600;
+                background-color: rgb(34, 33, 33);
+                opacity: 0.7;
+
+                .globe-icon {
+                    margin-right: 8px;
+                }
+
+                .down-icon {
+                    margin-left: 8px;
+                }
+            }
+
+            .signIn-btn {
+                background-color: rgb(204, 8, 8);
+                border: none;
+                height: 35px;
+                line-height: 0;
+                margin-left: 15px;
+            }
         }
     }
 
-    .form-control {
-        border: 1px solid #fff;
-        height: 60px;
-        width: 400px;
-        background-color: rgb(27, 26, 26);
-        opacity: 0.9;
-    }
+    .body-container {
+        width: 1000px;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-    .form-control::placeholder {
-        color: rgb(159, 159, 159);
-        opacity: 1;
+        h1 {
+            color: #fff;
+            font-weight: 900;
+            font-size: 50px;
+        }
+
+        h3 {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .form-label {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .get-start {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            .form-control {
+                border: 1px solid #fff;
+                height: 60px;
+                width: 400px;
+                background-color: rgb(27, 26, 26);
+                opacity: 0.9;
+            }
+
+            .form-control::placeholder {
+                color: rgb(159, 159, 159);
+                opacity: 1;
+            }
+
+            .btn {
+                border: none;
+                height: 60px;
+                width: 200px;
+                background-color: rgb(204, 8, 8);
+                color: #fff;
+                font-weight: 500;
+                font-size: 25px;
+                margin-left: 20px;
+
+                .right-icon {
+                    margin-left: 5px;
+                    height: 20px;
+                    margin-bottom: 2px;
+                }
+            }
+        }
     }
 }
