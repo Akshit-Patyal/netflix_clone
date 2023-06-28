@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import Login from './Dashboard/Login';
+import NetflixRoutes from './Routes/NetflixRoutes';
 
 function App() {
   return (
     <div className="App">
-      <Login />
+      <NetflixRoutes />
     </div>
   );
 }
