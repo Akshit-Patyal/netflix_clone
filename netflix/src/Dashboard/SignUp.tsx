@@ -26,8 +26,9 @@ const SignUp = () => {
                     <Form>
                         <Form.Label className="mb-3">Ready to watch? Enter your email to create or restart your membership.</Form.Label>
                         <div className="get-start">
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Control type="email" placeholder="Email address" value={email} onChange={(ev) => { setEmail(ev.target.value) }} />
+                            <Form.Group className="form-floating mb-3" controlId="exampleForm.ControlInput1">
+                                <Form.Control type="email" placeholder="Email address" id="floatingEmail" value={email} onChange={(ev) => { setEmail(ev.target.value) }} />
+                                <Form.Label htmlFor="floatingEmail">Email address</Form.Label>
                             </Form.Group>
                             <Button>Get Started<FontAwesomeIcon icon={faChevronRight} className="right-icon" /></Button>
                         </div>

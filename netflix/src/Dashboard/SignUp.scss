@@ -27,8 +27,7 @@
                 color: #fff;
                 line-height: 0;
                 font-weight: 600;
-                background-color: rgb(34, 33, 33);
-                opacity: 0.7;
+                background-color: rgb(27, 25, 25, 0.7);
 
                 .globe-icon {
                     margin-right: 8px;
@@ -41,10 +40,11 @@
 
             .signIn-btn {
                 background-color: rgb(204, 8, 8);
+                color: #fff;
                 border: none;
                 height: 35px;
                 line-height: 0;
-                margin-left: 15px;
+                margin-left: 20px;
             }
         }
     }
@@ -79,17 +79,29 @@
             flex-direction: row;
             justify-content: center;
 
-            .form-control {
-                border: 1px solid #fff;
-                height: 60px;
-                width: 400px;
-                background-color: rgb(27, 26, 26);
-                opacity: 0.9;
-            }
+            .form-floating {
+                .form-control {
+                    border: 1px solid #fff;
+                    height: 60px;
+                    width: 400px;
+                    background-color: rgb(27, 26, 26);
+                    opacity: 0.9;
+                    color: rgb(159, 159, 159);
+                }
 
-            .form-control::placeholder {
-                color: rgb(159, 159, 159);
-                opacity: 1;
+                .form-control:focus {
+                    box-shadow: none;
+                }
+
+                .form-label {
+                    color: rgb(159, 159, 159);
+                    font-size: 17px;
+                }
+
+                .form-label::after {
+                    color: rgb(159, 159, 159);
+                    background-color: transparent;
+                }
             }
 
             .btn {
