@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: url("../../public/Login.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../../public/Login.jpg");
     position: fixed;
     height: 100%;
     width: 100%;
@@ -39,18 +39,31 @@
             .form-data {
                 width: 100%;
 
-                .form-control {
-                    border: none;
-                    height: 45px;
-                    background-color: rgb(88, 82, 82);
-                }
+                .form-floating {
+                    .form-control {
+                        border: none;
+                        height: 45px;
+                        background-color: rgb(88, 82, 82);
+                        color: rgb(159, 159, 159);
+                    }
 
-                .form-control::placeholder {
-                    color: rgb(159, 159, 159);
-                    opacity: 1;
+                    .form-control:focus {
+                        box-shadow: none;
+                    }
+
+                    .form-label {
+                        color: rgb(159, 159, 159);
+                        font-size: 17px;
+                    }
+
+                    .form-label::after {
+                        color: rgb(159, 159, 159);
+                        background-color: transparent;
+                    }
                 }
 
                 .btn {
+                    border: none;
                     background-color: rgb(204, 8, 8);
                     color: #fff;
                     width: 100%;

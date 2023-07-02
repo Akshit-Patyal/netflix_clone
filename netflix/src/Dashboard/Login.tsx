@@ -15,11 +15,13 @@ const Login = () => {
                     <div className="form-comp">
                         <h1>Sign In</h1>
                         <Form className="form-data">
-                            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                                <Form.Control type="email" placeholder="Email" value={userName} onChange={(ev) => { setUserName(ev.target.value) }} />
+                            <Form.Group className="form-floating mb-3">
+                                <Form.Control type="email" placeholder="Email or phone number" id="floatingEmail" value={userName} onChange={(ev) => { setUserName(ev.target.value) }} />
+                                <Form.Label htmlFor="floatingEmail">Email or phone number</Form.Label>
                             </Form.Group>
-                            <Form.Group controlId="exampleForm.ControlTextarea1">
-                                <Form.Control type="password" placeholder="Password" value={password} onChange={(ev) => { setPassword(ev.target.value) }} />
+                            <Form.Group className="form-floating mb-3">
+                                <Form.Control type="password" placeholder="Password" id="floatingPassword" value={password} onChange={(ev) => { setPassword(ev.target.value) }} />
+                                <Form.Label htmlFor="floatingPassword">Password</Form.Label>
                             </Form.Group>
                             <Button className="mt-5">
                                 Login
