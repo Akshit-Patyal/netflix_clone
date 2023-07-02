@@ -18,8 +18,8 @@
     }
 
     .form-container {
-        height: 450px;
-        width: 420px;
+        min-height: 450px;
+        min-width: 420px;
         background-color: #000;
         border-radius: 4px;
         opacity: 0.9;
@@ -44,7 +44,7 @@
                         border: none;
                         height: 45px;
                         background-color: rgb(88, 82, 82);
-                        color: rgb(159, 159, 159);
+                        color: #fff;
                     }
 
                     .form-control:focus {
@@ -59,6 +59,18 @@
                     .form-label::after {
                         color: rgb(159, 159, 159);
                         background-color: transparent;
+                    }
+
+                    .user-valid {
+                        color: #e87c03;
+                        font-size: 12px;
+                        font-weight: 600;
+                    }
+
+                    .pass-valid {
+                        color: #e87c03;
+                        font-size: 12px;
+                        font-weight: 600;
                     }
                 }
 
