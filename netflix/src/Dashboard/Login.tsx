@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./Login.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [userNameValid, setUserNameValid] = useState(true);
     const [passwordValid, setPasswordValid] = useState(true);
+
+    const navigate = useNavigate();
 
     /**
      * @method userNameValidation
@@ -53,6 +55,7 @@ const Login = () => {
         event.preventDefault();
         if (userNameValid && passwordValid) {
             console.log("Login");
+            navigate("/main");
         }
     };
 

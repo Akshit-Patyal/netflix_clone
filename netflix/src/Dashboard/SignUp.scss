@@ -92,6 +92,14 @@
                     color: #fff;
                 }
 
+                .correct {
+                    border: 1px solid green;
+                }
+
+                .incorrect {
+                    border: 1px solid red;
+                }
+
                 .form-control:focus {
                     box-shadow: none;
                 }

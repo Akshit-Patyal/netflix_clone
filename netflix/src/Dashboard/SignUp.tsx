@@ -51,7 +51,7 @@ const SignUp = () => {
                         <Form.Label className="mb-3">Ready to watch? Enter your email to create or restart your membership.</Form.Label>
                         <div className="get-start">
                             <Form.Group className="form-floating mb-3">
-                                <Form.Control type="email" placeholder="Email address" id="floatingEmail" value={email} onChange={userNameHandler} />
+                                <Form.Control type="email" placeholder="Email address" id="floatingEmail" value={email} onChange={userNameHandler} className={`${(isEmailValid && email.length > 0) && "correct"} ${!isEmailValid && "incorrect"}`} />
                                 <Form.Label htmlFor="floatingEmail">Email address</Form.Label>
                                 {!isEmailValid && <span className="valid">Please enter a valid email address or phone number.</span>}
                             </Form.Group>
